@@ -76,7 +76,9 @@ for index in range(len(house_links)):
 
     form_links = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div[1]/div/div[1]/input')
     form_links.send_keys(house_links[index])
-    form_links.send_keys(Keys.ENTER)
+
+    submit_btn = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div/div/span/span')
+    submit_btn.click()
 
     driver.quit()
 
